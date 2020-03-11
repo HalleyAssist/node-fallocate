@@ -24,7 +24,8 @@
   "dependencies": {
     "errno": "^0.1.4",
     "ffi": "git+https://github.com/ZFail/node-ffi.git",
-    "ref": "git+https://github.com/gorunovanton/ref.git#node-13"
+    "ref": "git+https://github.com/gorunovanton/ref.git#node-13",
+    "ref-struct": "git+https://github.com/ZFail/ref-struct.git"
   },
   "devDependencies": {
     "mocha": "^3.5.3",
