@@ -23,7 +23,7 @@
   "homepage": "https://github.com/RealDolos/node-fallocate#readme",
   "dependencies": {
     "errno": "^0.1.4",
-    "ffi": "git+https://github.com/lxe/node-ffi.git#node-12",
+    "ffi": "git+https://github.com/ZFail/node-ffi.git",
     "ref": "git+https://github.com/sa-MatteoHausner/ref.git#node-12"
   },
   "devDependencies": {
