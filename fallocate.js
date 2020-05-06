@@ -20,7 +20,7 @@ class FallocateBase {
   }
 
   fallocate(path, offset, length, mode) {
-    const fd = fs.openSync(path, "a", {encoding: null});
+    const fd = fs.openSync(path, "a");
     try {
       this.ffallocate(fd, offset, length, mode);
     }

@@ -5,6 +5,7 @@ const fs = require("fs");
 
 require("mocha");
 require("should");
+const assert = require('assert')
 
 // cannot use /tmp, as it's often tmpfs and refused fallocate
 const TEST_ALLOC = "test.alloc";
@@ -19,7 +20,7 @@ async function doAlloc(method, offset, size, mode, cb) {
     cb = mode;
     mode = 0;
   }
-  const fd = fs.openSync(TEST_ALLOC, "w", {encoding: null});
+  const fd = fs.openSync(TEST_ALLOC, "w");
   try {
     checkSize(fd, 0);
     try {
@@ -47,7 +48,10 @@ async function doAlloc(method, offset, size, mode, cb) {
 }
 
 async function shouldSize(method, size) {
-  await doAlloc(method, 0, size, (err, fd) => checkSize(fd, size));
+  await doAlloc(method, 0, size, (err, fd) => {
+    assert(!err, err)
+    checkSize(fd, size)
+  });
 }
 
 

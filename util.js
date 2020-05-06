@@ -15,8 +15,8 @@ function pick_one(symbol, name, cands) {
   return null;
 }
 
-const ffi = require("ffi");
-const ref = require("ref");
+const ffi = require("ffi-napi");
+const ref = require("ref-napi");
 
 const {int, int32, int64, void: void_t} = ref.types;
 const void_ptr_t = ref.refType(void_t);
