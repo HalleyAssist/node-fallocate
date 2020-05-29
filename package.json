@@ -23,7 +23,7 @@
   "homepage": "https://github.com/RealDolos/node-fallocate#readme",
   "dependencies": {
     "errno": "^0.1.4",
-    "ffi-napi": "https://github.com/HalleyAssist/node-ffi-napi.git#v3.x",
+    "ffi-napi": "^3.0.0",
     "ref-napi": "^2.0.0",
     "ref-struct-napi": "^1.1.1"
   },
